@@ -1,0 +1,43 @@
+<Project>
+  <!-- 
+  C# 8.0 on .NET Framework: 
+  https://stu.dev/csharp8-doing-unsupported-things/
+  https://stackoverflow.com/questions/56651472/does-c-sharp-8-support-the-net-framework/57020770#57020770
+  -->
+  
+  <PropertyGroup>
+    <LangVersion>8.0</LangVersion>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+   <!-- shared editorconfig: https://docs.microsoft.com/en-us/visualstudio/code-quality/configure-fxcop-analyzers?view=vs-2019#shared-configuration -->
+  <PropertyGroup>
+    <SkipDefaultEditorConfigAsAdditionalFile>true</SkipDefaultEditorConfigAsAdditionalFile>
+  </PropertyGroup>
+  <ItemGroup Condition="Exists('$(MSBuildThisFileDirectory)/.editorconfig')" >
+    <AdditionalFiles Include="$(MSBuildThisFileDirectory)/.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(LangVersion)' == '8.0' and '$(TargetFramework)' != 'netcoreapp3.0' " >
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.8">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+
+    <!-- C# 8.0 on .NET Framework: Indexes and Ranges -->
+    <PackageReference Include="IndexRange" Version="1.0.0" />
+    <Compile Include="$(MSBuildThisFileDirectory)/RuntimeHelpers.cs" />
+    
+    <!-- C# 8.0 on .NET Framework: Async Streams -->
+    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="1.1.0" />
+    
+    <!-- 
+    C# 8.0 on .NET Framework: Provide nullable attribures and nullability annotations
+    https://github.com/tunnelvisionlabs/ReferenceAssemblyAnnotator 
+    -->
+    <PackageReference Include="TunnelVisionLabs.ReferenceAssemblyAnnotator" Version="1.0.0-alpha.154">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageDownload Include="Microsoft.NETCore.App.Ref" Version="[3.1.0]" />
+  </ItemGroup>
+  
+</Project>

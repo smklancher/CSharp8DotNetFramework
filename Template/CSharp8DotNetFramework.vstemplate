@@ -1,0 +1,38 @@
+<VSTemplate Version="3.0.0" Type="ProjectGroup" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+	<TemplateData>
+		<Name>CSharp8DotNetFramework</Name>
+		<Description>.NET Framework Solution configured for C# 8.0 with by way of packages and polyfills.</Description>
+		<ProjectType>CSharp</ProjectType>
+		<ProjectSubType>
+		</ProjectSubType>
+		<LanguageTag>CSharp</LanguageTag>
+		<PlatformTag>Windows</PlatformTag>
+		<ProjectTypeTag>desktop</ProjectTypeTag>
+		<SortOrder>1000</SortOrder>
+		<CreateNewFolder>true</CreateNewFolder>
+		<DefaultName>CSharp8DotNetFramework</DefaultName>
+		<ProvideDefaultName>true</ProvideDefaultName>
+		<LocationField>Enabled</LocationField>
+		<EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+		<Icon>__TemplateIcon.ico</Icon>
+	</TemplateData>
+	<TemplateContent>
+		<ProjectItem TargetFileName=".editorconfig" ReplaceParameters="true" OpenInEditor="false" OpenOrder="10">
+        .editorconfig
+		</ProjectItem>
+		<ProjectItem TargetFileName="Directory.Build.props" ReplaceParameters="true" OpenInEditor="true" OpenOrder="10">
+        Directory.Build.props
+		</ProjectItem>
+		<ProjectItem TargetFileName="RuntimeHelpers.cs" ReplaceParameters="true" OpenInEditor="false" OpenOrder="10">
+        RuntimeHelpers.cs
+		</ProjectItem>
+		<ProjectCollection>
+			<ProjectTemplateLink ProjectName="$projectname$WinForms">
+                CSharp8DotNetFrameworkWinForms\MyTemplate.vstemplate
+			</ProjectTemplateLink>
+			<ProjectTemplateLink ProjectName="$projectname$ClassLibrary">
+                CSharp8DotNetFrameworkClassLibrary\MyTemplate.vstemplate
+			</ProjectTemplateLink>
+		</ProjectCollection>
+	</TemplateContent>
+</VSTemplate>

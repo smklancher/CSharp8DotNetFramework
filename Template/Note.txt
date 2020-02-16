@@ -1,0 +1,24 @@
+Wanted to make this into a genuine template, but there are a lot more obstacles to a multi-project template that I thought.
+
+For using this as is by making a copy, beware of edge case issues:
+https://www.damirscorner.com/blog/posts/20151205-BeCarefulWhenCopyingVisualStudioProjects.html
+
+Details on multi-project templates:
+https://docs.microsoft.com/en-us/visualstudio/ide/how-to-create-multi-project-templates?view=vs-2019
+https://blog.jayway.com/2015/03/13/visual-studio-how-to-create-a-solution-template-with-multiple-projects/
+https://github.com/cwilby/tidy-architecture-template
+
+Location and trobleshooting
+https://docs.microsoft.com/en-us/visualstudio/ide/how-to-locate-and-organize-project-and-item-templates?view=vs-2019
+https://docs.microsoft.com/en-us/visualstudio/ide/how-to-troubleshoot-templates?view=vs-2019
+https://docs.microsoft.com/en-us/visualstudio/extensibility/troubleshooting-template-discovery?view=vs-2019
+
+My understanding is that solution items can only be added by developing a wizard:
+https://docs.microsoft.com/en-us/visualstudio/extensibility/how-to-use-wizards-with-project-templates?view=vs-2019&redirectedfrom=MSDN
+
+Possibly helpful:
+https://stackoverflow.com/questions/3882764/issue-with-visual-studio-template-directory-creation
+https://github.com/ligershark/side-waffle/wiki/How-to-create-a-multi-project-template
+https://stackoverflow.com/questions/23363599/create-a-solution-folder-in-a-visual-studio-project-template/31303266
+https://stackoverflow.com/questions/46291506/create-project-template-from-solution-folder-in-visual-studio
+https://stackoverflow.com/questions/9207537/add-solution-folder-to-visual-studio-project-template/30878880#30878880

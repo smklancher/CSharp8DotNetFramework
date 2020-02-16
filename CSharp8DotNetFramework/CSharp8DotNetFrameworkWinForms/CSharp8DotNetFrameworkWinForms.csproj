@@ -41,13 +41,14 @@
     <Compile Update="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <PackageReference Include="Costura.Fody" Version="4.1.0" />
-    <ProjectReference Include="..\CSharp8Examples\CSharp8Examples.csproj" />
+    <ProjectReference Include="..\CSharp8DotNetFrameworkClassLibrary\CSharp8DotNetFrameworkClassLibrary.csproj" />
     <Compile Update="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
